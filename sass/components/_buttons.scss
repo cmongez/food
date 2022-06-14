@@ -1,0 +1,20 @@
+.btn{
+    color: white;
+    background-color: $color-third;
+    border: .5px solid $color-light;
+    padding: 5px;
+    text-decoration: none;
+    margin: 12px 0;
+    display: block;
+    width: 100px;
+    text-align: center;
+
+
+    &:hover{
+        background-color: $color-light;
+        color: $color-dark;
+        border: .5px solid $color-dark;
+        font-weight: bold;
+    }
+
+}

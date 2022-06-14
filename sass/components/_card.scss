@@ -1,0 +1,88 @@
+.myCard{
+    &__primary{
+        background-color: $color-second;
+        @include flex-jc(center);
+        padding: 15px;
+    }
+    &__secondary{
+        
+        background-color: black;
+        background-image: url(../img/bg-card-s.jpg);
+        background-size: cover;
+        padding: 15px;
+        &-2{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: black;
+        background-image: url(../img/bg-card-s2.jpg);
+        background-size: cover;
+        padding: 15px;
+        }
+    }
+    &__style-one{
+        width: 35%;
+        display: flex;
+        margin: 4%;        
+        }
+    &__style-two{
+        width: 20%;
+        margin: 4%;
+        align-self: center;
+        &-img{
+            width: 100%;
+            }
+        }
+    &__style-three{
+        background-color: $color-first;
+        width: 34%;
+        margin: 4%;
+        padding: 30px 30px 20px 30px;
+        @include flex-jc(center);
+        flex-direction: column;
+        align-items: center;
+        &-text{
+            font-size: 20px;
+            font-weight: bold;
+            text-align: justify;
+            }
+        }
+    &__style-four{
+        background-color: $color-dark;
+        width: 34%;
+        margin: 4%;
+        padding: 30px 30px 20px 30px;
+        @include flex-jc(center);
+        flex-direction: column;
+        align-items: center;
+        border: solid 8px $color-first;
+        &-text{
+            font-size: 20px;
+            font-weight: bold;
+            color: $color-light;
+            text-align: justify;
+            }
+        }
+    &__primary-title,&__secondary-title{
+        color: $color-light;
+        padding: 15px;
+        font-size: 30px;
+        }
+    &__secondary-title-dark{
+        padding: 15px;
+        font-size: 30px;
+    }
+}
+@media (max-width: 767px){
+    
+    .myCard,.myCard__secondary,.myCard__primary,.myCard__style-one,.myCard__style-three,.myCard__style-four{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        
+    }
+    .myCard__style-two{
+        width: 60%;
+    }
+}

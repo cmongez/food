@@ -1,0 +1,124 @@
+<!-- Vamos a crear un sitio web para “food”, donde permita mostrar la información de la empresa, se
+le solicitará:
+● Crear estructura de directorio base del proyecto.
+● Crear directorios necesarios para el proyecto.
+● Crear documento HTML.
+● Crear directorios para imágenes,para Sass y CSS.
+● Crear archivo CSS a compilar.
+● Agregar imágenes al proyecto.
+● Crear estructura de proyecto para Sass usando el patrón 7-1.
+● Utilizar nesting para crear estilos en pseudo selectores. ○ Agregar nesting en
+componentes que requieran cambio de estado utilizando &.
+● Separar lógica visual del proyecto usando parciales, directivas @import y manifiesto. ○
+Crear archivos parciales necesarios para el proyecto.
+Construir estructura HTML utilizando etiquetas semánticas.
+Utilizar al menos 3 etiquetas semánticas como header, section, footer, nav o article. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header container-fluid d-flex justify-content-center justify-content-sm-end">
+        
+        <nav class="nav ">
+            <ul class="nav__list ">
+                <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                <li class="nav__item"><a href="#recipes" class="nav__link">Recetas</a></li>
+                <li class="nav__item"><a href="contact.html"class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="banner d-none d-md-flex">
+            <img src="img/bn-2.jpg" alt="" class="banner__img">
+            <div class="banner__title-container">
+                <div class="banner__title--vertical">
+                    <h1 class="banner__title">Food</h1>
+                </div>
+            </div>
+            <img src="img/bn-1.jpg" alt="" class="banner__img">
+        </section>
+        <section class="banner--mobile d-md-none">
+            <div class="banner--mobile__title-container">
+                <div class="banner--mobile__title--vertical">
+                    <h1 class="banner--mobile__title">Food</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="myCard">
+            <div class="myCard__primary">
+                <div class="myCard__style-one">
+                    <h2 class="myCard__primary-title" id="recipes">Recetas de batidos saludables</h2>
+                </div>
+                <div class="myCard__style-two">
+                    <img src="img/card-pr1.jpeg" alt="" class="myCard__style-two-img">
+                </div>
+                <div class="myCard__style-three">
+                    <p class="myCard__style-three-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium aliquam mollitia porro quasi culpa, perspiciatis et vel quo maiores! Alias est numquam voluptatem nobis, aspernatur debitis pariatur possimus 
+                    </p>
+                    <a class="btn" href="#">Leer más</a>
+                </div>
+            </div>
+            <div class="myCard__secondary">
+                <div class="myCard__style-four">
+                    <h2 class="myCard__secondary-title">Ideas de almuerzo</h2>
+                    <p class="myCard__style-four-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis delectus reprehenderit architecto quisquam! Consectetur dolore saepe, atque itaque hic perspiciatis maiores repellendus officiis! Cupiditate ad ut atque 
+                    </p>
+                    <a class="btn" href="#">Leer más</a>
+                </div>
+                <div class="myCard__style-three">
+                    <h2 class="myCard__secondary-title-dark">Recetas saludables</h2>
+                    <p class="myCard__style-three-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, ex delectus. Dolorem ducimus suscipit quasi explicabo dolor esse eius quo culpa, quia, quae maxime, nihil pariatur. Quos veritatis quae quasi.
+                    </p>
+                    <a class="btn" href="#">leer más</a>
+                </div>
+            </div>
+            <div class="myCard__primary">
+                <div class="myCard__style-one">
+                    <h2 class="myCard__primary-title text-center" id="recipes">Recetas de platos tipicos</h2>
+                </div>
+                <div class="myCard__style-two">
+                    <img src="img/card-pr2.jpg" alt="" class="myCard__style-two-img">
+                </div>
+                <div class="myCard__style-three">
+                    <p class="myCard__style-three-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium aliquam mollitia porro quasi culpa, perspiciatis et vel quo maiores! Alias est numquam voluptatem nobis, aspernatur debitis pariatur possimus 
+                    </p>
+                    <a class="btn" href="#">Leer más</a>
+                </div>
+            </div>
+            <div class="myCard__secondary-2">
+                <div class="myCard__style-four">
+                    <h2 class="myCard__secondary-title">Ideas de cena</h2>
+                    <p class="myCard__style-four-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis delectus reprehenderit architecto quisquam! Consectetur dolore saepe, atque itaque hic perspiciatis maiores repellendus officiis! Cupiditate ad ut atque 
+                    </p>
+                    <a class="btn" href="#">Leer más</a>
+                </div>
+                <div class="myCard__style-three">
+                    <h2 class="myCard__secondary-title-dark">Recetas ricas</h2>
+                    <p class="myCard__style-three-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, ex delectus. Dolorem ducimus suscipit quasi explicabo dolor esse eius quo culpa, quia, quae maxime, nihil pariatur. Quos veritatis quae quasi.
+                    </p>
+                    <a class="btn" href="#">leer más</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">Creado por César Mongez. 2022</p>      
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>
